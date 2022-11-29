@@ -1,0 +1,27 @@
+{
+ "name": "oras-web",
+ "version": "1.0.0",
+ "license": "MIT",
+ "scripts": {
+  "dev": "parcel src/index.html",
+  "build": "yarn clean && parcel build --public-url . src/index.html ",
+  "clean": "rm -rf dist/*"
+ },
+ "devDependencies": {
+  "@parcel/config-default": "^2.8.0",
+  "@parcel/transformer-postcss": "^2.8.0",
+  "@parcel/transformer-sass": "^2.8.0",
+  "@parcel/transformer-typescript-tsc": "^2.8.0",
+  "@types/gsap": "^3.0.0",
+  "autoprefixer": "^10.4.13",
+  "parcel": "^2.8.0",
+  "postcss": "^8.4.19",
+  "tailwindcss": "^3.2.4",
+  "typescript": "^4.9.3"
+ },
+ "dependencies": {
+  "embla-carousel": "^7.0.5",
+  "gsap": "^3.11.3",
+  "locomotive-scroll": "^4.1.4"
+ }
+}

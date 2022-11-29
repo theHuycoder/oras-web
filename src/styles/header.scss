@@ -1,0 +1,7 @@
+@import "./base.scss";
+
+.header__blur {
+ background: url("~/src/assets/blurs/header-top-left.png") 52px 0 no-repeat,
+  url("~/src/assets/blurs/header-centr-right.png") no-repeat 60% 70%,
+  $coolGray-900;
+}

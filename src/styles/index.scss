@@ -1,0 +1,72 @@
+@import './base.scss';
+@import './typo.scss';
+
+@import './header.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Mulish', sans-serif;
+}
+
+
+.btn-contained-gradient {
+	@apply text-2xl font-bold;
+	padding: 18px 56px;
+	background: linear-gradient(102.92deg, #605CFF 22.8%, #8C4C9F 69.32%);
+	border-radius: 4px;
+}
+
+.section-2-container {
+	@apply min-h-[556px];
+	background: url("../assets/section-2.jpg") no-repeat center/cover;
+}
+
+.section-title {
+	@apply text-5xl font-extrabold text-white leading-[70px];
+}
+
+.section-subtitle {
+	@apply text-lg leading-[28px] text-white;
+}
+
+.embla {
+	@apply relative;
+	max-width: 100%;
+
+	.embla__viewport {
+		overflow: hidden;
+		width: 100%;
+		border-top: 1.5px solid $white;
+		border-bottom:  1.5px solid $white;
+
+
+		&.is-dragging {
+			cursor: grabbing;
+		}
+
+		&.is-draggable {
+			cursor: move;
+			cursor: grab;
+		}
+	}
+
+	.embla__container {
+		user-select: none;
+		-webkit-touch-callout: none;
+		-khtml-user-select: none;
+		-webkit-tap-highlight-color: transparent;
+		margin-top: -10px;
+		height: 300px;
+
+	
+	}
+
+	.embla__slide {
+		position: relative;
+		height: 100%;
+		padding: 40px 0;
+	}
+}
