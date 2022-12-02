@@ -40,7 +40,7 @@ body {
 		overflow: hidden;
 		width: 100%;
 		border-top: 1.5px solid $white;
-		border-bottom:  1.5px solid $white;
+		border-bottom: 1.5px solid $white;
 
 
 		&.is-dragging {
@@ -60,13 +60,25 @@ body {
 		-webkit-tap-highlight-color: transparent;
 		margin-top: -10px;
 		height: 300px;
-
-	
 	}
 
 	.embla__slide {
+		@apply flex justify-center flex-col gap-4;
 		position: relative;
 		height: 100%;
-		padding: 40px 0;
 	}
+}
+
+#circle-control *{
+	transition: all 0.7s;
+}
+
+#circle-control .point{
+	cursor: pointer;
+}
+
+#circle-control .label{
+	@apply text-4xl font-bold;
+	transition: all 1.2s;
+	fill: $white;
 }

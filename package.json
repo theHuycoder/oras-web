@@ -3,7 +3,7 @@
  "version": "1.0.0",
  "license": "MIT",
  "scripts": {
-  "dev": "parcel src/index.html",
+  "dev": "parcel  src/index.html",
   "build": "yarn clean && parcel build --public-url . src/index.html ",
   "clean": "rm -rf dist/*"
  },
@@ -13,6 +13,7 @@
   "@parcel/transformer-sass": "^2.8.0",
   "@parcel/transformer-typescript-tsc": "^2.8.0",
   "@types/gsap": "^3.0.0",
+  "@types/scrollmagic": "^2.0.2",
   "autoprefixer": "^10.4.13",
   "parcel": "^2.8.0",
   "postcss": "^8.4.19",
@@ -21,7 +22,10 @@
  },
  "dependencies": {
   "embla-carousel": "^7.0.5",
+  "embla-carousel-wheel-gestures": "^3.0.0",
   "gsap": "^3.11.3",
-  "locomotive-scroll": "^4.1.4"
+  "locomotive-scroll": "^4.1.4",
+  "scrollmagic": "^2.0.8",
+  "scrollmagic-plugin-gsap": "^1.0.4"
  }
 }

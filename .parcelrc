@@ -6,8 +6,12 @@
   "*.{ts,tsx}": [
    "@parcel/transformer-typescript-tsc"
   ],
+  "*.{css}": [
+   "@parcel/transformer-postcss"
+  ],
   "*.{scss,sass}": [
-   "@parcel/transformer-sass"
+   "@parcel/transformer-sass",
+   "@parcel/transformer-postcss"
   ]
  }
 }

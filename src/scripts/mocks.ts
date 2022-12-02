@@ -42,4 +42,28 @@ export const chooseReasons = [
   subtitle:
    "Oras có đội ngũ nhân sự chuyên nghiệp, nhiệt tình, có kinh nghiệm trong lĩnh vực media. Chúng tôi luôn đặt chất lượng dịch vụ lên hàng đầu, đảm bảo khách hàng hài lòng về chất lượng dịch vụ.",
  },
+ {
+  key: "3",
+  title: "Đột phá và nhiệt huyết trong từng sản phẩm",
+  subtitle:
+   "Tư duy đột phá là một trong những kim chỉ nam trong làm việc của Oras. Không dừng lại ở việc đáp ứng theo nhu cầu của khách hàng, chúng tôi sẵn sàng nghiên cứu và định hướng để cùng tạo ra dấu ấn cho mọi sản phẩm",
+ },
+ {
+  key: "4",
+  title: "Nằm trong hệ sinh thái ENUY với gần 10 năm kinh nghiệm set up MKT",
+  subtitle:
+   "Nằm trong hệ sinh thái chuyên về MKT, mỗi nhân sự tại Oras đều kế thừa kinh nghiệm và tư duy sâu sắc về thị trường/doanh nghiệp từ đó xây dựng những định hướng nổi trội cho khách hàng.",
+ },
+ {
+  key: "5",
+  title: "Sự chỉn chu và cam kết trong mọi dịch vụ",
+  subtitle:
+   "Oras luôn tâm niệm: Sự hài lòng của khách hàng là động lực phát triển của doanh nghiệp. Chúng tôi xây dựng quy trình làm việc bài bản với từng dịch vụ bao gồm các giai đoạn trước - trong - sau bàn giao. Đảm bảo 100% đáp ứng tiến độ thời hạn và mang đến sản phẩm tốt nhất cho khách hàng.",
+ },
+ {
+  key: "6",
+  title: "Sự chỉn chu và cam kết trong mọi dịch vụ",
+  subtitle:
+   "Oras luôn cập nhật và nghiên cứu thị trường hàng tuần để hiểu được sự vận hành và xu hướng về Media. Dịch vụ set up livestream là một trong những bước đi đón đầu thị trường của Oras.",
+ },
 ];
