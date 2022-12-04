@@ -32,15 +32,16 @@ body {
 	@apply text-lg leading-[28px] text-white;
 }
 
+#choose-reason{
+	overflow-y: hidden
+}
+
 .embla {
 	@apply relative;
 	max-width: 100%;
 
 	.embla__viewport {
-		overflow: hidden;
 		width: 100%;
-		border-top: 1.5px solid $white;
-		border-bottom: 1.5px solid $white;
 
 
 		&.is-dragging {
@@ -59,13 +60,22 @@ body {
 		-khtml-user-select: none;
 		-webkit-tap-highlight-color: transparent;
 		margin-top: -10px;
-		height: 300px;
 	}
 
 	.embla__slide {
 		@apply flex justify-center flex-col gap-4;
 		position: relative;
-		height: 100%;
+		border-top: 1.5px solid $white;
+		border-bottom: 1.5px solid $white;
+		padding: 40px 0;
+		opacity: 0.4;
+		width: 100%;
+		max-width: 42vw;
+
+		&.active {
+			opacity: 1;
+		}
+		
 	}
 }
 
@@ -81,4 +91,17 @@ body {
 	@apply text-4xl font-bold;
 	transition: all 1.2s;
 	fill: $white;
+}
+
+.fadable{
+	opacity: 1;
+	transition: all 0.7s;
+}
+
+.fade-out {
+	opacity: 0;
+}
+
+.fade-in {
+	opacity: 1;
 }

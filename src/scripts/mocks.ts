@@ -1,3 +1,5 @@
+import review1Image from "../assets/review-1.jpg";
+
 export const inspireNumbers = [
  {
   key: "customer",
@@ -65,5 +67,21 @@ export const chooseReasons = [
   title: "Sự chỉn chu và cam kết trong mọi dịch vụ",
   subtitle:
    "Oras luôn cập nhật và nghiên cứu thị trường hàng tuần để hiểu được sự vận hành và xu hướng về Media. Dịch vụ set up livestream là một trong những bước đi đón đầu thị trường của Oras.",
+ },
+];
+
+export const reviews = [
+ {
+  author: "Nguyễn Thị Thanh Thảo",
+  title: "CEO - Công ty TNHH Thương mại Dịch vụ Thảo",
+  comment:
+   "Tôi thích phong cách thiết kế của Oras. Với phong cách thiết kế đơn giản, hiện đại, tinh tế mang đến sự khác biệt cho các doanh nghiệp.",
+  avatarUrl: review1Image,
+ },
+ {
+  author: "Nguyễn Thị Thanh Phương",
+  title: "CEO - Công ty TNHH Thương mại Dịch vụ Phương",
+  comment:
+   "Tôi thích phong cách thiết kế của Oras. Với phong cách thiết kế đơn giản, hiện đại, tinh tế mang đến sự khác biệt cho các doanh nghiệp.",
  },
 ];

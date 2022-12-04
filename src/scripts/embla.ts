@@ -175,7 +175,11 @@ export class SlidesBuilder {
    subtitleEl.innerText = reason.subtitle;
 
    titleEl.classList.add("m-0", "text-3xl", "font-semibold");
-   subtitleEl.classList.add("m-0", "text-xl", "font-medium");
+   subtitleEl.classList.add("m-0", "text-xl", "text-gray-400");
+
+   if (idx === 0) {
+    reasonEl.classList.add("active");
+   }
 
    reasonEl.classList.add("embla__slide");
    reasonEl.appendChild(titleEl);
