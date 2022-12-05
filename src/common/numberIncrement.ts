@@ -1,14 +1,14 @@
 export function increaseNumber(
- i: number,
+ startNumber: number,
  endNumber: number,
  element: HTMLElement,
  speed: number
 ) {
- if (i < endNumber) {
-  i++;
-  element.innerHTML = i.toString();
+ if (startNumber < endNumber) {
+  startNumber++;
+  element.innerHTML = startNumber.toString();
   setTimeout(() => {
-   increaseNumber(i, endNumber, element, speed);
+   increaseNumber(startNumber, endNumber, element, speed);
   }, speed);
  }
 }

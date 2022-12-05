@@ -1,15 +1,26 @@
 import gsap, { Power4 } from "gsap";
 import generateInspireNumbers from "./inspireNumbers";
+import Anime from "animejs";
 
-import { SlidesBuilder } from "./embla";
-import { reviews } from "./mocks";
+import { SlidesBuilder } from "./choose-reasons";
+import { reviews, news } from "./mocks";
 import { ReviewsCarousel } from "./reviews";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Anime from "animejs";
+import { NewsCardsBuilder } from "./news";
 
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
+ window.addEventListener("scroll", () => {
+  const nav = document.querySelector("#navbar");
+
+  if (window.scrollY > 0) {
+   nav?.classList.add("bg-gray-800", "shadow-md", "top-[-14px]", "py-4");
+  } else {
+   nav?.classList.remove("bg-gray-800", "shadow-md", "top-[-14px]", "py-4");
+  }
+ });
+
  const h1p1Content = "Oras_Giải pháp toàn diện";
 
  h1p1Content
@@ -36,6 +47,41 @@ window.addEventListener("load", () => {
    document.querySelector("#heading-p-2")?.appendChild(span);
   });
 
+ Anime({
+  targets: "#header-large",
+  opacity: [0, 1],
+  translateX: [-200, 0],
+  duration: 2000,
+  easing: "easeInOutQuad",
+ });
+
+ Anime({
+  targets: "#header-small",
+  opacity: [0, 1],
+  translateY: [-200, 0],
+  duration: 2000,
+  easing: "easeInOutQuad",
+  delay: 1100,
+ });
+
+ Anime({
+  targets: "#header-cta",
+  opacity: [0, 1],
+  translateY: [200, 0],
+  duration: 2000,
+  easing: "easeOutExpo",
+  delay: 2100,
+ });
+
+ Anime({
+  targets: "#navbar",
+  translateY: [-200, 14],
+  opacity: [0, 1],
+  duration: 2000,
+  easing: "easeOutExpo",
+  delay: 2100,
+ });
+
  Anime.timeline({ loop: false })
   .add({
    targets: ".anime-sunny .letter",
@@ -44,7 +90,7 @@ window.addEventListener("load", () => {
    translateZ: 0,
    easing: "easeOutExpo",
    duration: 950,
-   delay: (el, i) => 70 * i,
+   delay: (_, i) => 70 * i,
   })
   .add({
    targets: "#heading-p-3",
@@ -57,9 +103,9 @@ window.addEventListener("load", () => {
   .add({
    targets: "#heading-p-4",
    opacity: [0, 1],
-   translateY: [50, 0],
+   translateY: [20, 0],
    easing: "easeOutExpo",
-   duration: 950,
+   duration: 2000,
    delay: 0,
   });
 
@@ -103,7 +149,7 @@ window.addEventListener("load", () => {
  const tvc = document.querySelector("#tvc") as HTMLElement;
 
  let scrollTween = gsap.to("#services", {
-  xPercent: -300,
+  xPercent: -240,
   ease: "none",
   duration: 30,
   scrollTrigger: {
@@ -662,11 +708,6 @@ window.addEventListener("load", () => {
 
  const slides = document.querySelectorAll(".embla__slide") || [];
 
- const duration = Array.from(slides).reduce((acc, slide) => {
-  const height = slide.clientHeight;
-  return acc + height;
- }, 0);
-
  const reviewsEl = document.querySelector("#reviews") as HTMLElement;
 
  const circlePerimeter =
@@ -692,8 +733,6 @@ window.addEventListener("load", () => {
   start: "top top",
   end: "bottom bottom",
   onUpdate: (self) => {
-   console.log(self);
-
    const { progress } = self;
    let slideIndex = Math.floor(progress * slides.length);
 
@@ -741,4 +780,9 @@ window.addEventListener("load", () => {
  });
 
  new ReviewsCarousel({ containerEl: reviewsEl, reviews });
+
+ new NewsCardsBuilder(
+  document.querySelector("#news-slide-container") as HTMLElement,
+  news
+ ).build();
 });

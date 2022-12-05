@@ -1,10 +1,11 @@
 import { increaseNumber } from "../common/numberIncrement";
 import { inspireNumbers } from "./mocks";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function generateInspireNumbers() {
  const container = document.getElementById("inspire-numbers-container");
 
- inspireNumbers.forEach(({ number, label, speed, color }) => {
+ inspireNumbers.forEach(({ number, label, speed, color, startNumber }) => {
   const item = document.createElement("div");
   const itemNumberWrapper = document.createElement("div");
   const itemNumber = document.createElement("span");
@@ -27,7 +28,16 @@ export default function generateInspireNumbers() {
   item.appendChild(itemLabel);
 
   itemLabel.innerText = label;
-  increaseNumber(0, number, itemNumber, speed);
+  itemNumber.innerText = "0";
+
+  ScrollTrigger.create({
+   trigger: container,
+   scrub: 1,
+   once: true,
+   onEnter: () => {
+    increaseNumber(startNumber, number, itemNumber, speed);
+   },
+  });
   container?.appendChild(item);
  });
 }

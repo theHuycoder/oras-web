@@ -105,3 +105,40 @@ body {
 .fade-in {
 	opacity: 1;
 }
+
+.btn{
+	@apply text-3xl font-medium;
+	padding: 18px 56px;
+	border-radius: 4px;
+}
+
+.outline-white{
+	@apply text-white border-white;
+	border: 1px solid $white;
+}
+
+.contained-dark{
+	@apply text-white bg-gray-900;
+}
+
+.text-field{
+	@apply bg-none border-none py-2.5 text-base font-bold border-gray-900 w-full inline-block;
+	border-bottom: 1px solid;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.hoverable{
+	& * {
+		@apply duration-300;
+	}
+
+	.hover-child{
+		@apply flex items-center justify-center;
+		background-color: rgba(0,0,0,0.3);
+	}
+
+	&:hover .hover-child{
+		opacity: 1!important;
+	}
+}

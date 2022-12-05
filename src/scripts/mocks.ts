@@ -1,32 +1,39 @@
 import review1Image from "../assets/review-1.jpg";
+import news1Img from "../assets/news-1.jpg";
+import news2Img from "../assets/news-2.jpg";
+import news3Img from "../assets/news-3.jpg";
 
 export const inspireNumbers = [
  {
   key: "customer",
   label: "Khách hàng",
+  startNumber: 0,
   number: 150,
-  speed: 30,
+  speed: 5,
   color: "text-red-200",
  },
  {
   key: "media-staff",
   label: "Nhân sự Media",
+  startNumber: 0,
   number: 45,
-  speed: 110,
+  speed: 20,
   color: "text-yellow-200",
  },
  {
   key: "completed-projects",
   label: "Dự án hoàn thành",
+  startNumber: 900,
   number: 1000,
-  speed: 0,
+  speed: 8,
   color: "text-purple-200",
  },
  {
   key: "working-areas",
   label: "Lĩnh vực",
+  startNumber: 0,
   number: 15,
-  speed: 350,
+  speed: 30,
   color: "text-blue-200",
  },
 ];
@@ -83,5 +90,32 @@ export const reviews = [
   title: "CEO - Công ty TNHH Thương mại Dịch vụ Phương",
   comment:
    "Tôi thích phong cách thiết kế của Oras. Với phong cách thiết kế đơn giản, hiện đại, tinh tế mang đến sự khác biệt cho các doanh nghiệp.",
+ },
+];
+
+export const news = [
+ {
+  title: "Ngân hàng BIDV thay đổi bộ nhận diện thương hiệu mới- Oras Branding",
+  tag: "Nhận diện thương hiệu",
+  tagColor: "#DBC4E3",
+  link: "#",
+  imgUrl: news1Img,
+  createdAt: "2022-12-05T09:38:42.135Z",
+ },
+ {
+  title: "Ngân hàng BIDV thay đổi bộ nhận diện thương hiệu mới- Oras Branding",
+  tag: "Chụp ảnh sản phẩm",
+  tagColor: "#B3E5F9",
+  link: "#",
+  imgUrl: news2Img,
+  createdAt: "2022-12-05T09:38:42.135Z",
+ },
+ {
+  title: "Ngân hàng BIDV thay đổi bộ nhận diện thương hiệu mới- Oras Branding",
+  tag: "TVC Quảng cáo",
+  tagColor: "#FFCCCF",
+  link: "#",
+  imgUrl: news3Img,
+  createdAt: "2022-12-05T09:38:42.135Z",
  },
 ];
