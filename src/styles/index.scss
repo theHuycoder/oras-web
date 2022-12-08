@@ -134,8 +134,8 @@ body {
 	}
 
 	.hover-child{
+		opacity: 0;
 		@apply flex items-center justify-center;
-		background-color: rgba(0,0,0,0.3);
 	}
 
 	&:hover .hover-child{
